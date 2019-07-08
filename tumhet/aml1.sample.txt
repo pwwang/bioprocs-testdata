@@ -1,0 +1,3 @@
+Sample	Patient	Group	Batch
+P	P	P	P
+R	R	R	R
