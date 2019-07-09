@@ -1,9 +1,13 @@
+#!/usr/bin/env python
 """Generate meta file"""
 from pathlib import Path
 from remotedata import sha1, metafile
 
-def nameskip(name):
-	return not name or name.startswith('.') or name.endswith('.meta') or name == Path(__file__).name
+def nameskip(path):
+	return not path.name \
+		or path.name.startswith('.') \
+		or path.name.endswith('.meta') \
+		or path.name == 'workdir'
 
 class File:
 
@@ -36,12 +40,12 @@ class Dir(File):
 
 	@property
 	def mtime(self):
-		ret = 0
 		for path in self.path.glob('*'):
-			if path.is_dir() or nameskip(path.name):
+			if path.is_dir() or nameskip(path):
 				continue
-			ret = max(ret, File(path).mtime)
-		return ret
+			mtime = Dir(path)._mtime if path.is_dir() else path.stat().st_mtime
+			self._mtime = max(self._mtime, mtime)
+		return self._mtime
 
 	def needUpdate(self):
 		ret = super().needUpdate()
@@ -54,7 +58,7 @@ class Dir(File):
 		if self.path.name:
 			super().updateMeta()
 		for path in self.path.glob('*'):
-			if nameskip(path.name):
+			if nameskip(path):
 				continue
 			if path.is_dir():
 				path = Dir(path)
@@ -64,4 +68,4 @@ class Dir(File):
 				path.updateMeta()
 
 if __name__ == "__main__":
-	Dir('.').updateMeta()
+	Dir(Path(__file__).parent.parent).updateMeta()
