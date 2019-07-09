@@ -105,7 +105,7 @@ def convert2vcf(path):
 def splitVcf(vcffile, outdir):
 	pVcfSplit.input = vcffile
 	pVcfSplit.exdir = outdir
-	pVcfSplit.postCmd = 'cd {{proc.exdir}}/*-individuals; for i in *.vcf; do gzip $i; done'
+	pVcfSplit.postCmd = 'cd {{proc.exdir}}/*-individuals; for i in *.vcf; do bgzip $i; done'
 	PyPPL().start(pVcfSplit).run({'ppldir': TMPDIR})
 
 if __name__ == "__main__":
