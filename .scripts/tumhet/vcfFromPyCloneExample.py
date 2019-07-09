@@ -7,6 +7,7 @@ from remotedata import GithubRemoteData, CONFIG
 from pyppl import PyPPL
 from bioprocs.vcf import pVcfSplit
 from bioprocs.utils.tsvio2 import TsvReader
+random.seed(8525)
 
 TMPDIR = tempfile.gettempdir()
 CONFIG = CONFIG.copy()
@@ -78,13 +79,24 @@ def convert2vcf(path):
 				'GT:AD:DP:CN']
 			for sample in samples:
 				if sample == r.variant_case:
-					# we lost r.minor_cn
-					records.append('%s:%s,%s:%s:%s' % (
+					records.append('%s:%s,%s:%s:%s,%s' % (
 						'0|0' if r.genotype == 'AA' else '1|1' if r.genotype == 'BB' else '0|1',
 						r.ref_counts,
 						r.var_counts,
 						int(r.ref_counts) + int(r.var_counts),
-						r.major_cn))
+						r.major_cn,
+						r.minor_cn))
+				# get some shared mutations
+				elif int(mutation_ids[3]) % 2 == 0:
+					ref_counts = int(int(r.ref_counts) * random.random() * 2)
+					var_counts = int(int(r.var_counts) * random.random() * 2)
+					records.append('%s:%s,%s:%s:%s,%s' % (
+						'0|0' if r.genotype == 'AA' else '1|1' if r.genotype == 'BB' else '0|1',
+						ref_counts,
+						var_counts,
+						ref_counts + var_counts,
+						r.major_cn,
+						r.minor_cn))
 				else:
 					records.append('./.:.:.:.')
 			fvcf.write('\t'.join(records) + '\n')
@@ -93,6 +105,7 @@ def convert2vcf(path):
 def splitVcf(vcffile, outdir):
 	pVcfSplit.input = vcffile
 	pVcfSplit.exdir = outdir
+	pVcfSplit.postCmd = 'cd {{proc.exdir}}/*-individuals; for i in *.vcf; do gzip $i; done'
 	PyPPL().start(pVcfSplit).run({'ppldir': TMPDIR})
 
 if __name__ == "__main__":
