@@ -1,0 +1,10 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##contig=<ID=chrMT,length=156040895>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1	S2	S3	Control
+chr1	15183	.	C	A	.	LowEVS;FAILED1	AC=0;AF=0.00	GT:AD	0/0:9,2	./.:.	./.:.	0/0:6,0
+chr1	17407	.	G	A	.	LowEVS	AC=1;AF=0.167	GT:AD	./.:.	0/0:2,0	0/1:8,1	0/0:19,2
+chr1	17411	.	T	C	.	PASS	AC=1;AF=0.25	GT:AD	./.:.	./.:.	0/1:8,2	0/0:23,0
+chrMT	17585	.	G	T	.	LowEVS	AC=1;AF=0.25	GT:AD	0/1:17,2	./.:.	./.:.	0/0:23,0
+chr99	17585	.	G	T	.	LowEVS	AC=1;AF=0.25	GT:AD	0/1:17,2	./.:.	./.:.	0/0:23,0
