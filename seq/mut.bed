@@ -1,5 +1,5 @@
-chr1	10	10	SNP1	0	+	C	T
-chr2	73	73	SNP2	0	+	U	T
-chr3	100	100	SNP3	0	+	A	G
-chr4	1	1	SNP4	0	+	A	G
-chr1	1001	1001	SNP5	0	+	T	A
+chr1	10	10	SNP1	0	+	C	t
+chr2	73	73	SNP2	0	+	U	t
+chr3	100	100	SNP3	0	+	A	g
+chr4	1	1	SNP4	0	+	A	g
+chr1	1001	1001	SNP5	0	+	T	a
