@@ -1,0 +1,2 @@
+Case1	SamGroup1		Young	Old
+Case2	SamGroup2		Male	Female

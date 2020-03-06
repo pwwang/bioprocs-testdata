@@ -1,0 +1,12 @@
+S1	SamGroup1
+S2	SamGroup1
+S3	SamGroup1
+S4	SamGroup1
+S4	SamGroup2
+S5	SamGroup2
+S6	SamGroup2
+S7	SamGroup2
+S7	SamGroup3
+S8	SamGroup3
+S9	SamGroup3
+S10	SamGroup3

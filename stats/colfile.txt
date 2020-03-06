@@ -1,0 +1,11 @@
+	Compare1	Compare2
+S1	SamGroup1	SamGroup1
+S2	SamGroup1	SamGroup2
+S3	SamGroup1	SamGroup1
+S4	SamGroup1	SamGroup2
+S5	SamGroup2	NA
+S6	SamGroup2	NA
+S7	SamGroup2	SamGroup2
+S8	NA	SamGroup2
+S9	NA	Samgroup1
+S10	NA	Samgroup1

@@ -1,0 +1,15 @@
+V1	Male
+V1	Young
+V2	Male
+V2	Young
+V3	Male
+V4	Male
+V4	Old
+V5	Male
+V5	Old
+V7	Old
+V8	Female
+V8	Young
+V9	Female
+V9	Young
+V10	Female

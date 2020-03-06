@@ -1,0 +1,11 @@
+	Gender	Age
+V1	Male	Young
+V2	Male	Young
+V3	Male	NA
+V4	Male	Old
+V5	Male	Old
+V6	NA	NA
+V7	NA	Old
+V8	Female	Young
+V9	Female	Young
+V10	Female	NA
