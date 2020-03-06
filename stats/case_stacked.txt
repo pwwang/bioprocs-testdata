@@ -1,2 +1,2 @@
-Case1	SamGroup1
-Case2	SamGroup2
+Case1	SamGroup1	SamGroup2
+Case2	SamGroup2	SamGroup3
