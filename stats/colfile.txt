@@ -7,5 +7,5 @@ S5	SamGroup2	NA
 S6	SamGroup2	NA
 S7	SamGroup2	SamGroup2
 S8	NA	SamGroup2
-S9	NA	Samgroup1
-S10	NA	Samgroup1
+S9	NA	SamGroup1
+S10	NA	SamGroup1
