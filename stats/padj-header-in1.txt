@@ -1,0 +1,3 @@
+name	pval
+R1	1e-10
+R2	1e-20

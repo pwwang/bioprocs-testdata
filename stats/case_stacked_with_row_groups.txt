@@ -1,2 +1,2 @@
-Case1	SamGroup1:SamGroup2	Young:Old
-Case2	SamGroup2:SamGroup3	Male:Female
+SamGroup1:SamGroup2	Young:Old
+SamGroup2:SamGroup3	Male:Female

@@ -1,2 +1,2 @@
-Case1	Compare1	Age
-Case2	Compare2	Gender
+Compare1	Age
+Compare2	Gender
