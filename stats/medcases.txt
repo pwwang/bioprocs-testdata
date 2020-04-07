@@ -1,6 +1,6 @@
-Case1   S1 ~ S2 | S3
-Case2   S4 ~ S5 | S8
-Case3   S4 ~ S6 | S8
-Case4   S9 ~ S5 | S8
-Case5   S2 ~ S3 | S7
-Case6   S4 ~ S5 | S10
+Case1	S1 ~ S2 | S3
+Case2	S4 ~ S5 | S8
+Case3	S4 ~ S6 | S8
+Case4	S9 ~ S5 | S8
+Case5	S2 ~ S3 | S7
+Case6	S4 ~ S5 | S10
